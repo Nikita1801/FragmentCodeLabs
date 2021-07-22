@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class BlankFragment extends Fragment {
+public class SimpleFragment extends Fragment {
     private static final int YES = 0;
     private static final int NO = 1;
 
@@ -23,18 +23,21 @@ public class BlankFragment extends Fragment {
     private String mParam2;
 
 
-    public BlankFragment() {
+    public SimpleFragment() {
     }
 
 
     // TODO: Rename and change types and number of parameters
-    public static BlankFragment newInstance(String param1, String param2) {
-        BlankFragment fragment = new BlankFragment();
+    public static SimpleFragment newInstance(String param1, String param2) {
+        SimpleFragment fragment = new SimpleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+    public static SimpleFragment newInstance() {
+        return new SimpleFragment()  ;
     }
 
     @Override

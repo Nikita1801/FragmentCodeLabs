@@ -6,30 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:name="com.example.fragmentcodelabs.BlankFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_blank"></fragment>
+        tools:layout="@layout/fragment_blank"></FrameLayout>
 
-    <fragment
-        android:id="@+id/fragment_rating_bar"
-        android:name="com.example.fragmentcodelabs.RatingBarFragment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/fragment"
-        app:layout_constraintStart_toStartOf="@+id/fragment"
-        app:layout_constraintTop_toBottomOf="@+id/fragment"
-        tools:layout="@layout/fragment_raiting_bar"></fragment>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="97dp"
         android:layout_marginLeft="@dimen/image_left_margin"
         android:layout_marginTop="150dp"
         android:scaleType="centerCrop"
@@ -42,16 +33,14 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginLeft="@dimen/margin_wide"
         android:layout_marginRight="@dimen/margin_wide"
-        android:layout_marginStart="@dimen/margin_wide"
         android:text="@string/title1"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"/>
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -75,5 +64,15 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="288dp"/>
     </ScrollView>
+
+    <Button
+        android:id="@+id/open_button"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/open"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
