@@ -1,5 +1,6 @@
 package com.example.fragmentcodelabs;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -39,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void onSaveInstaceState(Bundle savedInstanceState)
-    {
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putBoolean(STATE_FRAGMENT, isFragmentDisplaed);
         super.onSaveInstanceState(savedInstanceState);
     }
+
     public void displayFragment() {
         SimpleFragment simpleFragment = SimpleFragment.newInstance();
         FragmentManager fragmentManager = getSupportFragmentManager();
